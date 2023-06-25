@@ -13,6 +13,24 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
+  - name: 战网-亚服
+    type: socks5
+    server: 158.247.249.118
+    port: 45834
+    username: QCO3yucpX4
+    password: HDaQ3spQ0Z
+  - name: by
+    type: vmess
+    server: 144.202.0.96
+    port: 17773
+    cipher: auto
+    uuid: b7f47d82-d285-4044-abb2-0f38e3a2d2af
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /by
   - name: GPT
     type: ssr
     server: 149.28.15.229
@@ -43,8 +61,10 @@ proxy-groups:
     proxies:
       - GPT
       - BBR
-      - DIRECT
       - GPT-LT
+      - by
+      - 战网-亚服
+      - DIRECT
   - name: 📲 电报消息
     type: select
     proxies:
@@ -133,6 +153,7 @@ proxy-groups:
   - name: 🤖 人工智能
     proxies:
       - GPT-LT
+      - by
     type: select
     _index: 18
 rules:
