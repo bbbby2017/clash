@@ -13,12 +13,6 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - name: 战网-亚服
-    type: socks5
-    server: 158.247.249.118
-    port: 45834
-    username: QCO3yucpX4
-    password: HDaQ3spQ0Z
   - name: by
     type: vmess
     server: 144.202.0.96
@@ -63,7 +57,6 @@ proxy-groups:
       - BBR
       - GPT-LT
       - by
-      - 战网-亚服
       - DIRECT
   - name: 📲 电报消息
     type: select
