@@ -21,26 +21,14 @@ dns:
       - 180.76.76.76
 #==============================================
 proxies:
-  - name: 🔗 线路C
-    type: vless
-    server: www.visa.com.hk
-    port: 2096
-    uuid: 4e4544da-a086-4440-9cb8-6b3aae84b3cf
-    udp: true
-    tls: true
-    network: ws
-    servername: us.ssrdns.top
-    ws-opts:
-      path: "/?ed=2048"
-      headers:
-        Host: us.ssrdns.top
+  kkkkk
 #==============================================
 proxy-groups:
 
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🔗 线路C
+      jjjjj
 
   - name: 📲 电报消息
     type: select
