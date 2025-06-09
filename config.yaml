@@ -23,10 +23,40 @@ dns:
 #==============================================
 proxies:
   - name: 🔗 线路1
+    type: vmess
+    server: us.ssrdns.top
+    port: 8443
+    uuid: f783e36b-97a4-49f9-bb9a-765b5fb0dc5f
+    alterId: 0
+    cipher: auto
+    tls: true
+    udp: true
+    network: ws
+    servername: us.ssrdns.top
+    ws-opts:
+      path: /
+      headers:
+        Host: us.ssrdns.top
+
+  - name: 🔗 线路2
+    type: vless
+    server: us.ssrdns.top
+    port: 2096
+    uuid: a7b9cfb6-b413-44b4-a5f1-424fce2153ac
+    tls: true
+    udp: true
+    network: ws
+    servername: us.ssrdns.top
+    ws-opts:
+      path: /
+      headers:
+        Host: us.ssrdns.top
+
+  - name: 🔗 线路3
     type: trojan 
     server: www.visa.com.hk
     port: 2087 
-    password: hYG3tJgdS1
+    password: kkkkk
     tls: true
     udp: true
     sni: us.ssrdns.top
@@ -44,6 +74,8 @@ proxy-groups:
     type: select
     proxies:
       - 🔗 线路1
+      - 🔗 线路2
+      - 🔗 线路3
 
   - name: 📲 电报消息
     type: select
