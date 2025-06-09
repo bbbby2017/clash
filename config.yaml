@@ -24,7 +24,7 @@ dns:
 proxies:
   - name: 🔗 线路1
     type: vmess
-    server: us.ssrdns.top
+    server: www.visa.com.hk
     port: 8443
     uuid: kkkkk1
     alterId: 0
@@ -40,7 +40,7 @@ proxies:
 
   - name: 🔗 线路2
     type: vless
-    server: us.ssrdns.top
+    server: www.visa.com.hk
     port: 2096
     uuid: kkkkk2
     tls: true
@@ -73,9 +73,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🔗 线路1
-      - 🔗 线路2
-      - 🔗 线路3
+      jjjjj
 
   - name: 📲 电报消息
     type: select
